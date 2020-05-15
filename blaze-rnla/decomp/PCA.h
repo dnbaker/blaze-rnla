@@ -65,7 +65,6 @@ public:
         for(auto it = vr.begin(), eit = vr.end(); it != eit; ++it) {
             const auto lhval = it->value();
             const auto lhind = it->index();
-            size_t lhoffset = dim_ * lhind - ((lhind - 1) * lhind);
             auto ptr = &accumulation_[dim_ * lhind - ((lhind - 1) * lhind)];
             auto oit = it;
             do {
