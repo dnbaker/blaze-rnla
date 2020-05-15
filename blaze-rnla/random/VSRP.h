@@ -13,7 +13,7 @@ CompressedMatrix<FT, SO> generate_vsrp(size_t nr, size_t nc, RNG &rng, double s=
     CompressedMatrix<FT, SO> ret(nr, nc);
     FT sqrts = std::sqrt(s);
     FT nsqrts = -sqrts;
-    FT halfs = .5 * s;
+    FT halfs = .5 / s;
     std::vector<unsigned> buf;
     buf.reserve(nc);
     std::uniform_real_distribution<FT> urd;
